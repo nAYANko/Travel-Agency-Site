@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="relative w-full h-screen">
+        <!-- First Image (Fade In) -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('bg-1.avif')">
+        </div>
+      
+        <!-- Second Image (Fade In on Scroll) -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('bg-2.png')" id="second-image">
+        </div>
+      </div>
+      
+      <script>
+        // JavaScript to trigger fade-in of second image on scroll
+        window.addEventListener('scroll', () => {
+          const secondImage = document.getElementById('second-image');
+          const scrollPosition = window.scrollY;
+          const imagePosition = secondImage.offsetTop;
+      
+          if (scrollPosition > imagePosition - window.innerHeight) {
+            secondImage.classList.remove('opacity-0');
+            secondImage.classList.add('opacity-100');
+          } else {
+            secondImage.classList.remove('opacity-100');
+            secondImage.classList.add('opacity-0');
+          }
+        });
+      </script>
+       
+</body>
+</html>
+
+

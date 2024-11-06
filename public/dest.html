@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Set the background image to be fixed */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('bg-3.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Montserrat Alternates', sans-serif;
+    }
+
+    /* Container for the sections to scroll */
+    .scrollable-sections {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    /* Section Styling */
+    .section {
+      width: 100%;
+      padding: 80px 0;
+    }
+
+    /* Ensure the cards section moves independently */
+    #sec-1, #sec-2, #sec-3 {
+      width: 100%;
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="relative  bg-cover bg-center">
+    <div class="relative w-full py-4">
+      <!-- "Get High" on the left -->
+      <div class="font-caveat absolute left-10 top-1/2 transform -translate-y-1/2 text-4xl font-bold text-palm-green">
+        Get High
+      </div>
+
+      <!-- Navbar surrounding only the list items -->
+      <nav class="flex items-center justify-center py-4 px-0 bg-opacity-50 bg-white shadow-md rounded-full max-w-xl mx-auto">
+        <ul class="flex space-x-8">
+          <li class="relative group">
+            <a href="index.html" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              Home
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+          <li class="relative group">
+            <a href="#" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              Destinations
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+          <li class="relative group">
+            <a href="#" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              About Us
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+          <li class="relative group">
+            <a href="#" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              Contact
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- "Book Now" button on the right -->
+      <a href="#" class="absolute right-10 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-sunset-orange text-white rounded-md hover:bg-orange-600">
+        Book Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Scrollable Sections -->
+  <div class="section">
+    <!-- Section 1 -->
+    <div class="section" id="sec-1">
+      <div class="flex space-x-8 overflow-x-auto pb-4 px-16 snap-x snap-mandatory justify-center">
+        <!-- Card 1 -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(paris.avif);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Paris</h3>
+            <p class="text-sunset-orange text-sm">Experience the romancer.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(maldives.avif);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Maldives</h3>
+            <p class="text-sunset-orange text-sm">Relax in crystal clear waters.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url('tokyo.avif');">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Tokyo</h3>
+            <p class="text-sunset-orange text-sm">Discover the beauty of Japan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="scrollable-sections" id="sec-2">
+      <div class="flex space-x-8 overflow-x-auto pb-4 px-16 snap-x snap-mandatory justify-center">
+        <!-- Cards as before -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(LA.avif);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Los Angeles</h3>
+            <p class="text-sunset-orange text-sm">The City of Dreams.</p>
+          </div>
+        </div>
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(pexels-studio-art-smile-218587-3476860.jpg);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">India</h3>
+            <p class="text-sunset-orange text-sm">Yes just the flag.</p>
+          </div>
+        </div>
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(lmao.jpeg);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">LMAO</h3>
+            <p class="text-sunset-orange text-sm">Skill Issue.</p>
+          </div>
+        </div>
+        <!-- More cards here -->
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="sec-3">
+      <div class="flex space-x-8 overflow-x-auto pb-4 px-16 snap-x snap-mandatory justify-center">
+        <!-- Cards as before -->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

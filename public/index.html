@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+.border {
+  border: 5px solid #ff6f3c;
+  border-radius: 255px 15px 255px 15px
+    / 15px 255px 15px 255px;
+}
+
+.is-drawn {
+  animation: draw 2s;
+  animation-fill-mode: forwards;
+}
+
+.is-undrawn {
+  animation: draw-reverse 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes draw {
+  0% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      0 0,
+      0 0,
+      /* Second line */ 0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      /* Third line */ 0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      /* Fourth line */ 0 0,
+      0 0,
+      0 0,
+      0 0
+    );
+  }
+
+  0.1% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      0 0,
+      0 min(8%, 13px),
+      /* Second line */ min(8%, 13px) min(8%, 13px),
+      0 0,
+      0 0,
+      0 0,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  23.9% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) 0,
+      100% 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  73.9% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) min(8%, 13px),
+      0 0,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+}
+
+@keyframes draw-reverse {
+  0% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) min(8%, 13px),
+      0 0,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  23.9% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  73.9% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      /* Second line */ calc(100% - min(8%, 13px)) 0,
+      100% 0,
+      100% 0,
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      /* Third line */ calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      100% 100%,
+      100% 100%,
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      /* Fourth line */ min(8%, 13px) calc(100% - min(8%, 13px)),
+      0 100%,
+      0 100%,
+      min(8%, 13px) calc(100% - min(8%, 13px))
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      /* Inner */ min(8%, 13px) min(8%, 13px),
+      calc(100% - min(8%, 13px)) min(8%, 13px),
+      calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+      min(8%, 13px) calc(100% - min(8%, 13px)),
+      min(8%, 13px) min(8%, 13px),
+      /* First line */ 0 0,
+      0 0,
+      0 0,
+      /* Second line */ 0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      /* Third line */ 0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      /* Fourth line */ 0 0,
+      0 0,
+      0 0,
+      0 0
+    );
+  }
+}
+
+.space-around {
+  margin: 60px;
+}
+
+
+/* Position the element nicely, so it looks better */
+
+.container {
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+  </style>
+  <script>
+    setInterval(() => {
+  const borderEl = document.querySelector('#border')
+  borderEl.classList.toggle('is-undrawn')
+  borderEl.classList.toggle('is-drawn')
+}, 3000)
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+  <script>
+    // Fade in on page load
+window.addEventListener('load', () => {
+    document.getElementById('page-content').classList.add('opacity-100');
+});
+
+// Function to handle fade-out when navigating away
+function switchPage(newPageUrl) {
+    const pageContent = document.getElementById('page-content');
+    pageContent.classList.remove('opacity-100'); // Starts fade-out
+
+    setTimeout(() => {
+        window.location.href = newPageUrl;
+    }, 500); // Delay matches `duration-500`
+}
+
+  </script>
+  <div id="page-content" class="opacity-0 transition-opacity duration-1000">
+  <!-- Hero Section -->
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url(bg-1.avif);">
+    <div class="relative w-full py-4">
+      <!-- "Get High" on the left -->
+      <a href= "index.html" class="font-caveat absolute left-10 top-1/2 transform -translate-y-1/2 text-4xl font-bold text-palm-green">
+        Get High
+      </a>
+    
+      <!-- Navbar surrounding only the list items -->
+      <nav class="flex items-center justify-center py-4 px-0 bg-opacity-50 bg-white shadow-md rounded-full max-w-xl mx-auto">
+        <ul class="flex space-x-8">
+          <li class="relative group">
+            <a href="index.html" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              Home
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+          <li class="relative group">
+            <a href="dest.html" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              Destinations
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+          <li class="relative group">
+            <a href="#" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              About Us
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+          <li class="relative group">
+            <a href="#" class="text-ocean-blue group-hover:text-cloud-white relative z-10 font-bold">
+              Contact
+            </a>
+            <span class="absolute inset-0 w-full h-full bg-palm-green opacity-80 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 ease-in-out"></span>
+          </li>
+        </ul>
+      </nav>
+    
+      <!-- "Book Now" button on the right -->
+      <a href="#" class="absolute right-10 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-sunset-orange text-white rounded-md hover:bg-orange-600 animate-pulse">
+        Book Now
+      </a>
+    </div>
+    
+    <div class="text-cloud-white relative top-16 z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-16">
+      <h1 class=" font-sans text-4xl text-cloud-white md:text-5xl font-bold ">Discover the World, One Adventure at a Time!</h1>
+      <p class="font-sans text-xl">Your journey begins here</p>
+    </div>
+  </header>
+
+  <!-- Destinations Carousel Section -->
+  <div class="py-16 bg-[url('bg-2.png')] bg-cover bg-center">
+    <div class="text-center mb-8">
+      <div class="container">
+        <div class="border is-drawn" id="border">
+          <div class="space-around">
+      <h2 class="font-caveat text-4xl font-bold text-palm-green">Popular Destinations</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" justify-center">
+      <div class="flex space-x-4 overflow-x-auto pb-4 px-6 snap-x snap-mandatory justify-center">
+        <!-- Card 1 -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(paris.avif);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Paris</h3>
+            <p class="text-sunset-orange text-sm">Experience the romancer.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(maldives.avif);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Maldives</h3>
+            <p class="text-sunset-orange text-sm">Relax in crystal clear waters.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url('tokyo.avif');">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Tokyo</h3>
+            <p class="text-sunset-orange text-sm">Discover the beauty of Japan.</p>
+          </div>
+        </div>
+
+        <div class="snap-center w-80 h-96 flex-shrink-0 bg-cover bg-center rounded-lg shadow-lg relative overflow-hidden"
+          style="background-image: url(LA.avif);">
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-sandy-beige bg-opacity-80 text-center">
+            <h3 class="text-xl font-bold text-ocean-blue">Los Angeles</h3>
+            <p class="text-sunset-orange text-sm">The city of Dreams.</p>
+          </div>
+        </div>
+        <!-- Additional Cards (4-6) can follow the same structure -->
+      </div>
+    </div>
+
+    <!-- Show More Button -->
+    <div class="text-center mt-8 animate-bounce">
+      <a href="dest.html" class="px-6 py-3 bg-cloud-white text-ocean-blue rounded-md hover:bg-sandy-beige">Explore All Destinations</a>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

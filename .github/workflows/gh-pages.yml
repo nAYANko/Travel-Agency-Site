@@ -1,0 +1,26 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and deploy
+        run: |
+          mkdir -p build  # Replace 'build' with your custom folder name
+          cp -r public/* build/  # Replace <your-folder> with your actual folder
+          cd build
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "ayanadvitya@gmail.com"
+          git add .
+          git commit -m "Deploy GitHub Pages"
+          git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:gh-pages
+
